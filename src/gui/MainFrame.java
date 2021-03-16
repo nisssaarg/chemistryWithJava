@@ -8,7 +8,8 @@ import java.awt.event.KeyEvent;
 
 public class MainFrame extends JFrame {
 
-    private final StarterPanel panel;
+    private final StarterPanel starterPanel;
+
 
     public MainFrame(String title) {
         super(title);
@@ -24,27 +25,36 @@ public class MainFrame extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setResizable(false);
 
-        panel = new StarterPanel();
+        starterPanel = new StarterPanel();
 
-        panel.setOrganicChemistryListener(() -> {
-            //TODO: Open Organic Chemistry Panel
+        starterPanel.setOrganicChemistryListener(() -> {
+            starterPanel.setVisible(false);
+            OrganicChemistryPanel organicChemistryPanel = new OrganicChemistryPanel();
+            organicChemistryPanel.setPeriodicTableListener(element -> {
+                organicChemistryPanel.setVisible(false);
+                addComponent(new PeriodTableElementPanel());
+            });
+            addComponent(organicChemistryPanel);
         });
 
-        panel.setInorganicChemistryListener(() -> {
+        starterPanel.setInorganicChemistryListener(() -> {
             //TODO: Open Inorganic Chemistry Panel
         });
-        panel.setQuizListener(() -> {
+
+        starterPanel.setQuizListener(() -> {
             //TODO: Open Quiz Panel
         });
-        panel.setAboutUsListener(() -> {
+
+        starterPanel.setAboutUsListener(() -> {
             //TODO: Open About Us Panel
         });
+
 
         setJMenuBar(createMenuBar());
 
         setLayout(new BorderLayout());
 
-        addComponent(panel);
+        addComponent(starterPanel);
 
         setVisible(true);
     }
@@ -76,7 +86,4 @@ public class MainFrame extends JFrame {
         return menuBar;
     }
 
-    private JPanel getPanel() {
-        return panel;
-    }
 }
