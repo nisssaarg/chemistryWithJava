@@ -12,10 +12,10 @@ import java.awt.*;
 
 public class StarterPanel extends JPanel {
 
-    private JButton organicChemistryButton;
-    private JButton inorganicChemistryButton;
-    private JButton quizButton;
-    private JButton aboutUsButton;
+    private final JButton organicChemistryButton;
+    private final JButton inorganicChemistryButton;
+    private final JButton quizButton;
+    private final JButton aboutUsButton;
     private OrganicChemistryListener organicChemistryListener;
     private InorganicChemistryListener inorganicChemistryListener;
     private QuizListener quizListener;
@@ -27,6 +27,11 @@ public class StarterPanel extends JPanel {
         quizButton = new JButton("Quiz");
         aboutUsButton = new JButton("About Us");
 
+        organicChemistryButton.setFont(new Font("Open Sans", Font.BOLD, 24));
+        inorganicChemistryButton.setFont(new Font("Open Sans", Font.BOLD, 24));
+        quizButton.setFont(new Font("Open Sans", Font.BOLD, 24));
+        aboutUsButton.setFont(new Font("Open Sans", Font.BOLD, 24));
+        
         setLayoutComponents();
 
         organicChemistryButton.addActionListener(actionEvent -> {

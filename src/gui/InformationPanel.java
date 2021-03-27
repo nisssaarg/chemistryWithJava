@@ -8,11 +8,20 @@ public class InformationPanel extends JPanel {
     private final SummaryPanel summaryPanel;
     JSplitPane informationPane;
 
-    public InformationPanel() {
-        detailsPanel = new DetailsPanel();
-        summaryPanel = new SummaryPanel();
-        informationPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, detailsPanel, summaryPanel);
+    public InformationPanel(String element) {
+        detailsPanel = new DetailsPanel(element);
+        summaryPanel = new SummaryPanel(element);
+        informationPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, new JScrollPane(detailsPanel), new JScrollPane(summaryPanel));
+        informationPane.setOneTouchExpandable(true);
         setLayout(new BorderLayout());
         add(informationPane, BorderLayout.CENTER);
+
+        Dimension preferred = getPreferredSize();
+        preferred.width = 600;
+        setPreferredSize(preferred);
+        Dimension minimum = getMinimumSize();
+        minimum.width = 400;
+        setMinimumSize(minimum);
+
     }
 }

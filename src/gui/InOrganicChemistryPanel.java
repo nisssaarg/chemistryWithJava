@@ -1,5 +1,6 @@
 package gui;
 
+import listeners.BackListener;
 import listeners.PeriodicTableListener;
 
 import javax.swing.*;
@@ -8,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class OrganicChemistryPanel extends JPanel implements ActionListener {
+public class InOrganicChemistryPanel extends JPanel implements ActionListener {
 
     private final JButton back;
     private final JButton hydrogen;
@@ -130,8 +131,9 @@ public class OrganicChemistryPanel extends JPanel implements ActionListener {
     private final JButton tennessine;
     private final JButton oganesson;
     private PeriodicTableListener periodicTableListener;
+    private BackListener backListener;
 
-    public OrganicChemistryPanel() {
+    public InOrganicChemistryPanel() {
         hydrogen = new JButton("H");
         helium = new JButton("He");
         lithium = new JButton("Li");
@@ -252,6 +254,7 @@ public class OrganicChemistryPanel extends JPanel implements ActionListener {
         oganesson = new JButton("Og");
 
         back = new JButton("Back");
+        back.addActionListener(this);
 
         setLayoutComponents();
     }
@@ -744,7 +747,7 @@ public class OrganicChemistryPanel extends JPanel implements ActionListener {
         //Rutherfordium
         gc.gridx++;
         rutherfordium.setPreferredSize(dimension);
-        ruthenium.addActionListener(this);
+        rutherfordium.addActionListener(this);
         add(rutherfordium, gc);
 
         //Dubnium
@@ -1022,14 +1025,24 @@ public class OrganicChemistryPanel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        JButton button = (JButton) actionEvent.getSource();
-        System.out.println(button.getText());
-        if (periodicTableListener != null) {
-            periodicTableListener.onElementSelected(button.getText());
+        if (actionEvent.getSource() == back) {
+            if (backListener != null) {
+                backListener.onBackClick();
+            }
+        } else {
+            JButton button = (JButton) actionEvent.getSource();
+            System.out.println(button.getText());
+            if (periodicTableListener != null) {
+                periodicTableListener.onElementSelected(button.getText());
+            }
         }
     }
 
     public void setPeriodicTableListener(PeriodicTableListener periodicTableListener) {
         this.periodicTableListener = periodicTableListener;
+    }
+
+    public void setBackListener(BackListener backListener) {
+        this.backListener = backListener;
     }
 }
