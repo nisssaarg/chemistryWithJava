@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
+import java.util.concurrent.ExecutionException;
 
 public class StarterPanel extends JPanel {
 
@@ -48,7 +49,11 @@ public class StarterPanel extends JPanel {
 
         quizButton.addActionListener(actionEvent -> {
             if (quizListener != null) {
-                quizListener.onQuizSelected();
+                try {
+                    quizListener.onQuizSelected();
+                } catch (ExecutionException | InterruptedException e) {
+                    System.out.println(e.getMessage());
+                }
             }
         });
 

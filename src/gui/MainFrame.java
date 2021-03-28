@@ -54,7 +54,11 @@ public class MainFrame extends JFrame implements BackListener {
         });
 
         starterPanel.setQuizListener(() -> {
-            //TODO: Open Quiz Panel
+            backStack.getBackStack().peek().setVisible(false);
+            QuizPanel quizPanel = new QuizPanel();
+            quizPanel.setBackListener(MainFrame.this);
+            backStack.getBackStack().add(quizPanel);
+            addComponent(quizPanel);
         });
 
         starterPanel.setAboutUsListener(() -> {
