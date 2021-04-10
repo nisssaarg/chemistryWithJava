@@ -8,3 +8,14 @@ need not go look here and there as we aim to provide everything at a single sour
 ## About Chemistry With Java
 The Chemistry with java is an application which combines the Organic and the Inorganic world of Chemistry into a single application to promote the learning and the understanding of the
 subject by introducing visual aid to the subject.
+
+## Technical Details
+The application is developed basically with three levels. The User Interface is built using the Swing framework. The Intermediate level we implement Java Database Connectivity for
+SQLite3 implying that the underlying base layer we use SQLite3 as the database. For the Organic world of Chemistry we use an API named <a href="https://pubs.acs.org/doi/full/10.1021/ci100384d" target = "_blank">OPSIN (Open Parser for Systematic IUPAC Nomenclature)</a> which take an IUPAC name of the Organic Compound into its structure.
+
+## Features
+<ol>
+  <li>Organic Chemistry Panel - Enter IUPAC name and get the Chemical Formula as well as 2D and 3D depiction of the enter name</li>
+  <li>Inorganic Chemistry Panel - View the periodic table as well see all the exciting properties of the elements in the periodic table along with their electron configuration</li>
+  <li>Quiz Panel - Test your Chemisrty knowledge with a range of quizes</li>
+</ol>
