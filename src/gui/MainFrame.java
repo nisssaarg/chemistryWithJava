@@ -35,7 +35,11 @@ public class MainFrame extends JFrame implements BackListener {
         backStack.getBackStack().add(starterPanel);
 
         starterPanel.setOrganicChemistryListener(() -> {
-            //TODO: Open Inorganic Chemistry Panel
+            backStack.getBackStack().peek().setVisible(false);
+            OrganicChemistryPanel organicChemistryPanel = new OrganicChemistryPanel();
+            organicChemistryPanel.setBackListener(MainFrame.this);
+            backStack.getBackStack().add(organicChemistryPanel);
+            addComponent(organicChemistryPanel);
         });
 
         starterPanel.setInorganicChemistryListener(() -> {
