@@ -6,12 +6,11 @@ While we can't solve problems like memorization we can definately help with prov
 need not go look here and there as we aim to provide everything at a single source.
 
 ## About Chemistry With Java
-The Chemistry with java is an application which combines the Organic and the Inorganic world of Chemistry into a single application to promote the learning and the understanding of the
-subject by introducing visual aid to the subject.
+The Chemistry with java is an application which combines the Organic and the Inorganic world of Chemistry into a single application to promote the learning and the understanding of the subject by introducing visual aid to the subject.
 
 ## Technical Details
 The application is developed basically with three levels. The User Interface is built using the Swing framework. The Intermediate level we implement Java Database Connectivity for
-SQLite3 implying that the underlying base layer we use SQLite3 as the database. For the Organic world of Chemistry we use an API named <a href="https://pubs.acs.org/doi/full/10.1021/ci100384d" target = "_blank">OPSIN (Open Parser for Systematic IUPAC Nomenclature)</a> which take an IUPAC name of the Organic Compound into its structure.
+SQLite3 implying that the underlying base layer we use SQLite3 as the database. For the Organic world of Chemistry we use an API named <a href="https://pubs.acs.org/doi/full/10.1021/ci100384d" target = "_blank">OPSIN (Open Parser for Systematic IUPAC Nomenclature)</a> which takes an IUPAC name of the Organic Compound and converts it into its structure.
 
 ## Features
 <ol>
