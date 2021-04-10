@@ -19,3 +19,7 @@ SQLite3 implying that the underlying base layer we use SQLite3 as the database. 
   <li>Inorganic Chemistry Panel - View the periodic table as well see all the exciting properties of the elements in the periodic table along with their electron configuration</li>
   <li>Quiz Panel - Test your Chemisrty knowledge with a range of quizes</li>
 </ol>
+
+## Screenshots 
+1. Periodic Table
+<img src = "https://github.com/java-developers-4/Screenshots/blob/main/PeriodicTable.png">
