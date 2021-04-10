@@ -21,5 +21,14 @@ SQLite3 implying that the underlying base layer we use SQLite3 as the database. 
 </ol>
 
 ## Screenshots 
-1. Periodic Table
+1. Intro Screen
+<img src = "https://github.com/java-developers-4/Screenshots/blob/main/IntroScreen.png">
+
+2. Periodic Table (Inorganic Chemistry Panel)
 <img src = "https://github.com/java-developers-4/Screenshots/blob/main/PeriodicTable.png">
+
+3. Element of periodic table (Inorganic Chemistry Panel)
+<img src = "https://github.com/java-developers-4/Screenshots/blob/main/Element.png">
+
+3. Organic Chemistry Panel
+<img src = "https://github.com/java-developers-4/Screenshots/blob/main/OrganicChem.png">
