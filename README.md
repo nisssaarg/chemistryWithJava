@@ -32,10 +32,3 @@ SQLite3 implying that the underlying base layer we use SQLite3 as the database. 
 4. Organic Chemistry Panel
 <img src = "https://github.com/java-developers-4/Screenshots/blob/main/OrganicChem.png">
 
-# Developers:
-<ol>
-  <li>Vaishnavi MP</li>
-  <li>Mohammed Ameen</li>
-  <li>Nisarg Devdhar</li>
-  <li><a href = "https://github.com/carlton-noronha?tab=repositories" target = "_blank">Carlton Noronha</a></li>
-</ol>
